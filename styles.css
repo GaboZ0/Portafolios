@@ -1,0 +1,697 @@
+/* ---------- Estilos generales ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', Helvetica, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/8324.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.modo-claro {
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url("http://4kwallpapers.com/images/walls/thumbs_2t/20530.jpg");
+}
+
+/* ---------- Header y navegación ---------- */
+header {
+    background: rgba(51, 51, 51, 0.9);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+body.modo-claro header {
+    background: rgba(221, 221, 221, 0.9);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #25c517;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul li a:hover {
+    background-color: #5c5c5c;
+}
+
+#modoBtn {
+    background: #25c517;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 18px;
+    transition: transform 0.3s;
+    padding: 10px 0px 10px 0px;
+    width: 90px;
+    height: 45px;
+}
+
+#modoBtn:hover {
+    transform: scale(1.1);
+}
+
+body.modo-claro #modoBtn {
+    background: #25c517;
+    color: #333;
+}
+
+/* ---------- Sección Inicio ---------- */
+#inicio {
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1.5s ease;
+}
+
+#inicio h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #25c517;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#inicio h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+body.modo-claro #inicio h2 {
+    color: #333;
+}
+
+.bienvenida {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #cccccc;
+}
+
+body.modo-claro .bienvenida {
+    color: #666;
+}
+
+/* ---------- Secciones generales ---------- */
+.seccion {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 30px auto 30px auto;
+    background-color: rgba(80, 80, 80, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    animation: fadeInUp 1s ease;
+}
+
+body.modo-claro .seccion {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffffff;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #25c517;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+body.modo-claro h2 {
+    color: #333;
+}
+
+/* ---------- Sobre mí ---------- */
+.sobremi-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#FotoPerfil {
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+    border: 4px solid #25c517;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+#sobremi p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* ---------- Proyectos ---------- */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.proyecto-item {
+    background: rgba(160, 160, 160, 0.3);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body.modo-claro .proyecto-item {
+    background: rgba(58, 248, 10, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.proyecto-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.proyecto-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+    color: #25c517;
+    font-size: 1.5em;
+}
+
+.proyecto-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.proyecto-item-mod {
+    background: rgba(160, 160, 160, 0.3);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.proyecto-descripcion {
+    margin-bottom: 15px;
+    color: #e7e7e7;
+    flex-grow: 1;
+}
+
+body.modo-claro .proyecto-descripcion {
+    color: #333;
+}
+
+.proyecto-enlace {
+    display: inline-block;
+    margin: 10px 0;
+    color: #25c517;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.verMasBtn {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s;
+}
+
+body.modo-claro .verMasBtn {
+    background: #555;
+}
+
+.verMasBtn:hover {
+    background: #25c517;
+}
+
+.ver-mas-info {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: left;
+    animation: fadeIn 0.5s ease;
+}
+
+body.modo-claro .ver-mas-info {
+    background: rgba(0,0,0,0.05);
+}
+
+/* ---------- Referencias ---------- */
+.referencias-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.testimonio {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+body.modo-claro .testimonio {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonio:hover {
+    transform: translateY(-5px);
+}
+
+.testimonio blockquote {
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.testimonio blockquote::before {
+    content: '"';
+    font-size: 3em;
+    color: #25c517;
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    opacity: 0.5;
+}
+
+.testimonio figcaption {
+    text-align: end;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+/* ---------- Contacto ---------- */
+.contacto-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.redes-sociales h3,
+.formulario-container h3 {
+    margin-bottom: 20px;
+    color: #25c517;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+}
+
+.redes-sociales ul {
+    list-style: none;
+}
+
+.redes-sociales li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 30px;
+}
+
+.redes-sociales a {
+    color: #25c517;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: #25c517;
+    text-decoration: underline;
+}
+
+/* ---------- Formulario ---------- */
+.formulario {
+    background: rgba(236, 236, 236, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+body.modo-claro .formulario {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.modo-claro .formulario label {
+    color: #333;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    resize: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #25c517;
+    box-shadow: 0 0 5px rgba(9, 255, 0, 0.5);
+    outline: none;
+}
+
+.formulario textarea {
+    height: 150px;
+}
+
+.error-msg {
+    color: #ff4444;
+    font-size: 14px;
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.contador-caracteres {
+    text-align: right;
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.formulario button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.modo-claro .formulario button {
+    background: #555;
+}
+
+.formulario button:hover {
+    background: #25c517;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ---------- Botón Ir Arriba ---------- */
+#irArriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.modo-claro #irArriba {
+    background-color: #555;
+}
+
+#irArriba.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+#irArriba:hover {
+    background-color: #25c517;
+    transform: scale(1.1);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+body.modo-claro footer {
+    background: #ddd;
+    color: #333;
+}
+
+/* ---------- Animaciones ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    header {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    #modoBtn {
+        margin: 10px 0 0 0;
+    }
+    
+    #inicio h1 {
+        font-size: 2.5em;
+    }
+    
+    #inicio h2 {
+        font-size: 1.5em;
+    }
+    
+    .seccion {
+        padding: 40px 15px;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .referencias-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .sobremi-contenido {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    #inicio {
+        padding: 60px 15px;
+    }
+    
+    #inicio h1 {
+        font-size: 2em;
+    }
+    
+    #inicio h2 {
+        font-size: 1.3em;
+    }
+    
+    .proyecto-item {
+        padding: 15px;
+    }
+}
+/* ========== CLIMA SIMPLE ========== */
+#clima {
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgba(80, 80, 80, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#clima h2 {
+    color: #25c517;
+    margin-bottom: 20px;
+}
+
+#clima input {
+    padding: 10px;
+    border: 2px solid #25c517;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#btnClima {
+    background: #25c517;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnClima:hover {
+    background: #1fa312;
+}
+
+#resultado-clima {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Modo claro */
+body.modo-claro #clima {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+body.modo-claro #resultado-clima {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #clima input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    #btnClima {
+        width: 100%;
+    }
+}

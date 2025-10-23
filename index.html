@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Gabriel Arrieta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#referencia">Referencias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botón para cambiar modo claro/oscuro -->
+        <button id="modoBtn" title="Cambiar modo">Oscuro</button>
+    </header>
+    
+    <main>
+        <section id="inicio" class="seccion">
+            <h1>Arrieta Gabriel A.</h1>
+            <h2>Tec. Maestro Mayor de Obras</h2>
+            <p class="bienvenida">Bienvenido a mi portafolio profesional</p>
+        </section>
+        
+        <section id="sobremi" class="seccion">
+            <h2>Sobre mí</h2>
+            <div class="sobremi-contenido">
+                <img id="FotoPerfil" src="C:\Users\arrie\OneDrive\Escritorio\Gabriel\Facultad\Cuarto Cuatrimestre\Programacion Web\house\Proyectos\perfil\perfil.jpg.jpeg" alt="Foto de perfil de Gabriel Arrieta">
+                <p>Soy un estudiante de la carrera LCC. Me esfuerzo por aprender y mejorar mis habilidades constantemente. En mi tiempo libre, intento perfeccionar mis habilidades en desarrollo web y programación. Me apasiona crear soluciones innovadoras y aprender nuevas tecnologías.</p>
+            </div>
+        </section>
+        
+        <section id="proyectos" class="seccion">
+            <h2>Proyectos</h2>
+            
+            <div class="proyectos-grid">
+                <div class="proyecto-item-mod">
+                    <h3>Calculadora Web</h3>
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.KV21ji472SY-rg--3vnvzAHaEM?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Calculadora web">
+                    <p class="proyecto-descripcion">Calculadora web desarrollada en HTML, CSS y JavaScript.</p>
+                    <a href="#" class="proyecto-enlace">Ver proyecto</a>
+                    <button class="verMasBtn" data-target="infoExtra1">Ver más</button>
+                    <div id="infoExtra1" class="ver-mas-info">
+                        <p>Esta calculadora permite realizar operaciones básicas y tiene un diseño responsivo. Fue creada como proyecto de práctica para mejorar mis habilidades en JavaScript y CSS.</p>
+                    </div>
+                </div>
+                
+                <div class="proyecto-item">
+                    <h3>Aplicación Flask</h3>
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80" alt="Aplicación Flask">
+                    <p class="proyecto-descripcion">Aplicación web desarrollada con Flask y SQLite.</p>
+                    <a href="#" class="proyecto-enlace">Ver proyecto</a>
+                    <button class="verMasBtn" data-target="infoExtra2">Ver más</button>
+                    <div id="infoExtra2" class="ver-mas-info">
+                        <p>Esta aplicación es un sistema web desarrollado con Flask y SQLite que permite gestionar operaciones básicas de una calculadora y almacenar resultados.</p>
+                    </div>
+                </div>
+                
+                <div class="proyecto-item">
+                    <h3>Biblioteca Virtual</h3>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_1280.jpg" alt="Biblioteca virtual">
+                    <p class="proyecto-descripcion">Biblioteca desarrollada con método Lista</p>
+                    <a href="#" class="proyecto-enlace">Ver proyecto</a>
+                    <button class="verMasBtn" data-target="infoExtra3">Ver más</button>
+                    <div id="infoExtra3" class="ver-mas-info">
+                        <p>Sistema de gestión de biblioteca que permite administrar libros, usuarios y préstamos utilizando estructuras de datos tipo lista.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="referencia" class="seccion">
+            <h2>Referencias</h2>
+            <div class="referencias-container">
+                <figure class="testimonio">
+                    <blockquote>
+                        "Durante el período en que lo conocí, Gabriel ha demostrado ser una persona organizada, con iniciativa y gran disposición para el trabajo en equipo. Además, muestra un fuerte interés en seguir aprendiendo y desarrollando nuevas habilidades. Considero que sería un gran aporte en cualquier proyecto o equipo en el que participe."
+                    </blockquote>
+                    <figcaption><br>
+                        <strong>Cereceda Facundo</strong><br>
+                        Teléfono: 264 58983042<br>
+                        Email: Cerecedafacundo@ejemplo.com
+                    </figcaption>
+                </figure>
+                
+                <figure class="testimonio">
+                    <blockquote>
+                        "Gabriel está muy comprometido con sus proyectos. Con capacidad para resolver problemas y dedicación."
+                    </blockquote>
+                    <figcaption><br><br><br><br>
+                        <strong>Martínez Laura</strong><br>
+                        Teléfono: 264 51234567<br>
+                        Email: martinez.laura@ejemplo.com
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <h2>Contacto</h2>
+            <div class="contacto-contenido">
+                <div class="redes-sociales">
+                    <h3>Redes Sociales</h3>
+                    <ul>
+                        <li>Email: <strong>arrietagabriel2002@gmail.com</strong></li>
+                        <li>Teléfono: <strong>+54 264 4576732</strong></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/gabriel-arrieta-4b900b355/" target="_blank">linkedin.com/in/gabriel-arrieta</a></li>
+                        <li>GitHub: <a href="https://github.com/GaboZ0" target="_blank">github.com/gabrielarrieta</a></li>
+                        <li>Instagram: <a href="https://www.instagram.com/_gabrielarrieta/" target="_blank">Instagram.com/__gabrielarrieta</a></li>
+                    </ul>
+                </div>
+        </section>
+        <section id="contacto" class="seccion">
+                <div class="formulario-container">
+                    <h3>Formulario de Contacto</h3>
+                    <form class="formulario" id="formContacto">
+                        <div class="campo-formulario">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" maxlength="100" required>
+                            <span class="error-msg" id="errorNombre"></span>
+                        </div>
+                        
+                        <div class="campo-formulario">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Email de Contacto" maxlength="100" required>
+                            <span class="error-msg" id="errorEmail"></span>
+                        </div>
+                        
+                        <div class="campo-formulario">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" maxlength="1000" placeholder="Escribe tu mensaje aquí" required></textarea>
+                            <span class="error-msg" id="errorMensaje"></span>
+                        </div>
+                        
+                        <button type="submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="clima" class="seccion">
+            <h2>Consulta el clima</h2>
+            <p>Ingresa el nombre de una ciudad para ver el clima actual:</p>
+            <input type="text" id="ciudad" placeholder="Ej: San Juan">
+            <button id="btnClima">Buscar</button>
+            <div id="resultado-clima"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Gabriel Alejandro Arrieta E010-497 LCC</p>
+        <p id="fecha-footer"></p>
+    </footer>
+    
+    <!-- Botón para ir al inicio -->
+    <button id="irArriba" title="Ir al inicio">↑</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
